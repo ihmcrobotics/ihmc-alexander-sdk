@@ -15,7 +15,6 @@ file(GLOB msg_files RELATIVE ${CMAKE_CURRENT_LIST_DIR} "msg/*.msg")
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES alexander_device_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
