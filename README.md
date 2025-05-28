@@ -1,5 +1,5 @@
 # ihmc-alexander-ros2
-ROS2 package containing messages for sending low-level control commands and receiving low-level robot data from IHMC's Alexander humanoid
+Light SDK consisting of meshes and URDF description of Alexander robot model, along with a ROS2 package containing messages for sending low-level control commands to and receiving low-level robot data from IHMC's Alexander humanoid.
 
 ## Maintainers
 * Stefan Fasano (sfasano@ihmc.org)
