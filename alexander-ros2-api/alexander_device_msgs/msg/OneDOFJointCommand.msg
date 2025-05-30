@@ -1,14 +1,14 @@
-# Sets the desireds for controlling each 1DOF joint
+#Sets the desireds for controlling each 1DOF joint
 
 string joint_name
 
-# Joint Desireds
+#Joint Desireds
 float64 q_des
 float64 qd_des
 float64 tau_des
 float64 stiffness
 float64 damping
 
-# Actuator commands
+#Actuator commands
 bool enable
 byte control_type
