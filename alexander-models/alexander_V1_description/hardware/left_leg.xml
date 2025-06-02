@@ -115,31 +115,30 @@
     </devices>
     <transmissions>
         <XmlCycloidMotorMechanism>
-            <name>LeftHipPitch</name>
             <jointName>L_HIP_Y</jointName>
             <motorName>LeftHipPitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <name>LeftHipYaw</name>
             <jointName>L_HIP_Z</jointName>
             <motorName>LeftHipYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <name>LeftKneePitch</name>
             <jointName>L_KNEE_Y</jointName>
             <motorName>LeftKneePitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
+            <name>L_ANKLE_DIFFERENTIAL</name>
             <pitchJoint>L_ANKLE_Y</pitchJoint>
             <rollJoint>L_ANKLE_X</rollJoint>
-            <leftMotor>LeftAnkleTopMotor</leftMotor>
-            <rightMotor>LeftAnkleBottomMotor</rightMotor>
+            <leftMotor>LeftAnkleBottomMotor</leftMotor>
+            <rightMotor>LeftAnkleTopMotor</rightMotor>
+            <present>true</present>
         </XmlJointPairMechanism>
     </transmissions>
 </XmlHardware>

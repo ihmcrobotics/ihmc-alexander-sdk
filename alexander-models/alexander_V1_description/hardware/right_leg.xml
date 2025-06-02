@@ -133,10 +133,12 @@
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
+            <name>R_ANKLE_DIFFERENTIAL</name>
             <pitchJoint>R_ANKLE_Y</pitchJoint>
             <rollJoint>R_ANKLE_X</rollJoint>
             <leftMotor>RightAnkleTopMotor</leftMotor>
             <rightMotor>RightAnkleBottomMotor</rightMotor>
+            <present>true</present>
         </XmlJointPairMechanism>
     </transmissions>
 </XmlHardware>
