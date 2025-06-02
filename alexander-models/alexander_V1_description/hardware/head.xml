@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XmlHardware>
+    <devices>
+        <XmlPlatinumTwitter>
+            <name>NeckPitchMotor</name>
+            <alias>1</alias>
+            <address>1</address>
+            <actuatorPackage>A</actuatorPackage>
+            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <zeroPositionOffset>0.0</zeroPositionOffset>
+            <present>true</present>
+        </XmlPlatinumTwitter>
+
+        <XmlEtherSnacksBoard>
+            <name>HeadEtherSnacksBoard</name>
+            <alias>1</alias>
+            <address>2</address>
+            <present>true</present>
+            <XmlIMU>
+                <name>HeadIMU</name>
+                <alias>0</alias>
+                <address>1</address>
+                <imuType>TDK</imuType>
+                <present>true</present>
+            </XmlIMU>
+            <XmlTemperatureSensor>
+                <name>HeadTempSensor</name>
+                <conversionConstant>1.0</conversionConstant>
+            </XmlTemperatureSensor>
+        </XmlEtherSnacksBoard>
+    </devices>
+    <transmissions>
+        <XmlCycloidMotorMechanism>
+            <jointName>NECK_Y</jointName>
+            <motorName>NeckPitchMotor</motorName>
+            <jointPositionOffset>0.0</jointPositionOffset>
+            <present>true</present>
+        </XmlCycloidMotorMechanism>
+    </transmissions>
+</XmlHardware>
