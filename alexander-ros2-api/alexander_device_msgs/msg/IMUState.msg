@@ -8,5 +8,5 @@ float64[3] gyroscope
 float64[3] accelerometer
 
 #Sensor Status
-int16 temperature
+int32 temperature
 bool is_operational

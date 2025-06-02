@@ -1,11 +1,12 @@
 #Holds the current state of Alexander
 
 #General Status
-float32 time
+float64 time
 bool is_faulted
-int16 number_of_joints
-int16 number_of_imus
-int16 number_of_fts
+bool is_calibrated
+int32 number_of_joints
+int32 number_of_imus
+int32 number_of_fts
 
 #Joint States
 alexander_device_msgs/OneDOFJointState[] joint_states
