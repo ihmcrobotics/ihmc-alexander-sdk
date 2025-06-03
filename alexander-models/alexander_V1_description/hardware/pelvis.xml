@@ -33,19 +33,22 @@
             <name>PelvisEtherSnacksBoard</name>
             <alias>5102</alias>
             <address>0</address>
+            <boardType>ALEXANDER</boardType>
             <present>true</present>
-            <XmlIMU>
-                <name>pelvis_stim_imu</name>
-                <alias>0</alias>
-                <address>1</address>
-                <imuType>TDK</imuType>
-                <present>true</present>
-            </XmlIMU>
-            <XmlTemperatureSensor>
-                <name>PelvisTempSensor</name>
-                <conversionConstant>1.0</conversionConstant>
-                <present>true</present>
-            </XmlTemperatureSensor>
+            <daughterDevices>
+                <XmlIMU>
+                    <name>pelvis_stim_imu</name>
+                    <alias>0</alias>
+                    <address>1</address>
+                    <imuType>TDK</imuType>
+                    <present>true</present>
+                </XmlIMU>
+                <XmlTemperatureSensor>
+                    <name>PelvisTempSensor</name>
+                    <conversionConstant>1.0</conversionConstant>
+                    <present>true</present>
+                </XmlTemperatureSensor>
+            </daughterDevices>
         </XmlEtherSnacksBoard>
     </devices>
     <transmissions>

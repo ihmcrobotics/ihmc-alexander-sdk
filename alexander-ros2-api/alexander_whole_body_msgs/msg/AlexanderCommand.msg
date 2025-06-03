@@ -7,4 +7,4 @@ bool calibrate
 int32 number_of_joints
 
 #Joint Commands for the robot
-alexander_device_msgs/OneDOFJointCommand[] joint_commands
+alexander_device_msgs/OneDOFJointCommand[<=50] joint_commands
