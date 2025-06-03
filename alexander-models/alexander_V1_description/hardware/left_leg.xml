@@ -12,7 +12,7 @@
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftHipPitchMotor</name>
-            <alias>6004</alias>
+            <alias>6005</alias>
             <address>0</address>
             <actuatorPackage>A004</actuatorPackage>
             <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
@@ -21,7 +21,7 @@
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftKneePitchMotor</name>
-            <alias>6005</alias>
+            <alias>6004</alias>
             <address>0</address>
             <actuatorPackage>A003</actuatorPackage>
             <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
