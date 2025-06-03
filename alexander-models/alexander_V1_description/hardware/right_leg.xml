@@ -6,13 +6,13 @@
             <alias>7002</alias>
             <address>0</address>
             <actuatorPackage>A012</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>RightHipPitchMotor</name>
-            <alias>7004</alias>
+            <alias>7005</alias>
             <address>0</address>
             <actuatorPackage>A011</actuatorPackage>
             <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
@@ -21,27 +21,27 @@
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>RightKneePitchMotor</name>
-            <alias>7005</alias>
+            <alias>7004</alias>
             <address>0</address>
             <actuatorPackage>A010</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>RightAnkleTopMotor</name>
-            <alias>7007</alias>
+            <alias>7008</alias>
             <address>0</address>
-            <actuatorPackage>A002</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <actuatorPackage>A001</actuatorPackage>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>RightAnkleBottomMotor</name>
-            <alias>7008</alias>
+            <alias>7007</alias>
             <address>0</address>
-            <actuatorPackage>A001</actuatorPackage>
+            <actuatorPackage>A002</actuatorPackage>
             <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>

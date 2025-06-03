@@ -22,9 +22,9 @@
         <XmlPlatinumTwitter>
             <name>RightHipRollMotor</name>
             <alias>5004</alias>
-            <address>4</address>
+            <address>0</address>
             <actuatorPackage>A009</actuatorPackage>
-            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
