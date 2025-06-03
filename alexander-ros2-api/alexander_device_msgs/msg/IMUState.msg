@@ -1,12 +1,12 @@
-#Holds the state of the IMU
+# Holds the state of the IMU
 
-string sensor_name
+string<=32 sensor_name
 
-#Sensor Data
+# Sensor Data
 float64[4] quaternion
 float64[3] gyroscope
 float64[3] accelerometer
 
-#Sensor Status
+# Sensor Status
 int32 temperature
 bool is_operational
