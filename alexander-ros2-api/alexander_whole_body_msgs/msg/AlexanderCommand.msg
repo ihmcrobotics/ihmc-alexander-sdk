@@ -4,7 +4,7 @@
 bool enable_actuators
 bool clear_faults
 bool calibrate
-uint8 number_of_joints
+uint32 number_of_joints
 
 # Joint Commands for the robot
 alexander_device_msgs/OneDOFJointCommand[<=50] joint_commands

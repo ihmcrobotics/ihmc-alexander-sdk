@@ -4,9 +4,9 @@
 float64 time
 bool is_faulted
 bool is_calibrated
-uint8 number_of_joints
-uint8 number_of_imus
-uint8 number_of_fts
+uint32 number_of_joints
+uint32 number_of_imus
+uint32 number_of_fts
 
 # Joint States
 alexander_device_msgs/OneDOFJointState[<=50] joint_states
