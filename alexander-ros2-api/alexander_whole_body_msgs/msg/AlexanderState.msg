@@ -1,16 +1,16 @@
-#Holds the current state of Alexander
+# Holds the current state of Alexander
 
-#General Status
+# General Status
 float64 time
 bool is_faulted
 bool is_calibrated
-int32 number_of_joints
-int32 number_of_imus
-int32 number_of_fts
+uint8 number_of_joints
+uint8 number_of_imus
+uint8 number_of_fts
 
-#Joint States
+# Joint States
 alexander_device_msgs/OneDOFJointState[<=50] joint_states
 
-#Sensor States
+# Sensor States
 alexander_device_msgs/IMUState[<=50] imu_states
 alexander_device_msgs/ForceTorqueState[<=50] ft_states

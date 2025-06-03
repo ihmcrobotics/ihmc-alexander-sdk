@@ -1,10 +1,10 @@
-#Holds desired control commands for Alexander
+# Holds desired control commands for Alexander
 
-#Operational commands of the robot
+# Operational commands of the robot
 bool enable_actuators
 bool clear_faults
 bool calibrate
-int32 number_of_joints
+uint8 number_of_joints
 
-#Joint Commands for the robot
+# Joint Commands for the robot
 alexander_device_msgs/OneDOFJointCommand[<=50] joint_commands
