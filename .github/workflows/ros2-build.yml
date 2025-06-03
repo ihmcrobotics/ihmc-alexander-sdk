@@ -26,5 +26,6 @@ jobs:
         
       - name: Colcon build
         run: |
+          source /opt/ros/jazzy/setup.bash
           cd alexander_msgs
           colcon build
