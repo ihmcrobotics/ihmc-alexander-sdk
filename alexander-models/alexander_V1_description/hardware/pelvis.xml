@@ -6,7 +6,7 @@
             <alias>5001</alias>
             <address>0</address>
             <actuatorPackage>A013</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
@@ -24,7 +24,7 @@
             <alias>5004</alias>
             <address>4</address>
             <actuatorPackage>A009</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>

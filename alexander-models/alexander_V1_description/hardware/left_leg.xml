@@ -24,7 +24,7 @@
             <alias>6004</alias>
             <address>0</address>
             <actuatorPackage>A003</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>

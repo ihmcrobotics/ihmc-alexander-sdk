@@ -15,7 +15,7 @@
             <alias>7004</alias>
             <address>0</address>
             <actuatorPackage>A011</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
