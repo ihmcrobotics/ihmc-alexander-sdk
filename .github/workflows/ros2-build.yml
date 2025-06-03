@@ -1,0 +1,30 @@
+name: Gradle test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  gradle-test:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        ros_distro: [jazzy]
+    container:
+      image: osrf/ros:${{ matrix.ros_distro }}-desktop
+    steps:
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y wget curl unzip
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Colcon build
+        run: |
+          cd alexander_msgs
+          colcon build
