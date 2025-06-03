@@ -21,6 +21,7 @@ jobs:
         
       - name: Colcon build
         run: |
+          apt-get update
+          apt-get -y install ros-${ROS_DISTRO}-ament-cmake-clang-format
           cd alexander_msgs
-          ls -al
           colcon build
