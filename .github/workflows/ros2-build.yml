@@ -7,6 +7,10 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   ros2-build:
     runs-on: self-hosted
@@ -21,7 +25,5 @@ jobs:
         
       - name: Colcon build
         run: |
-          apt-get update
-          apt-get -y install ros-${ROS_DISTRO}-ament-cmake-clang-format
           cd alexander_msgs
           colcon build
