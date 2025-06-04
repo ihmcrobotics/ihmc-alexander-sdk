@@ -30,16 +30,16 @@
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftAnkleTopMotor</name>
-            <alias>6007</alias>
+            <alias>6008</alias>
             <address>0</address>
             <actuatorPackage>A007</actuatorPackage>
-            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftAnkleBottomMotor</name>
-            <alias>6008</alias>
+            <alias>6007</alias>
             <address>0</address>
             <actuatorPackage>A006</actuatorPackage>
             <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
