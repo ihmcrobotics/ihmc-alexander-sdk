@@ -56,18 +56,24 @@
             <jointName>SPINE_Z</jointName>
             <motorName>PelvisYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-0.5235987756</lowerJointLimit>
+            <upperJointLimit>0.5235987756</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>LEFT_HIP_X</jointName>
             <motorName>LeftHipRollMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-0.3490658504</lowerJointLimit>
+            <upperJointLimit>0.872664626</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>RIGHT_HIP_X</jointName>
             <motorName>RightHipRollMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-0.872664626</lowerJointLimit>
+            <upperJointLimit>0.3490658504</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
     </transmissions>

@@ -127,18 +127,24 @@
             <jointName>RIGHT_HIP_Z</jointName>
             <motorName>RightHipYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-1.0472</lowerJointLimit>
+            <upperJointLimit>0.3490658504</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>RIGHT_HIP_Y</jointName>
             <motorName>RightHipPitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-2.61799</lowerJointLimit>
+            <upperJointLimit>0.785398</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>RIGHT_KNEE_Y</jointName>
             <motorName>RightKneePitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>0.0</lowerJointLimit>
+            <upperJointLimit>2.445206282</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
@@ -148,6 +154,10 @@
             <robotSide>right</robotSide>
             <leftMotor>RightAnkleTopMotor</leftMotor>
             <rightMotor>RightAnkleBottomMotor</rightMotor>
+            <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
+            <rollJointUpperLimit>0.436332</rollJointUpperLimit>
+            <pitchJointLowerLimit>-1.0472</pitchJointLowerLimit>
+            <pitchJointUpperLimit>0.523599</pitchJointUpperLimit>
             <present>true</present>
         </XmlJointPairMechanism>
     </transmissions>
