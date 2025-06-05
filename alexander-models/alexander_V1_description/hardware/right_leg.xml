@@ -127,18 +127,24 @@
             <jointName>R_HIP_Z</jointName>
             <motorName>RightHipYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>0.0</lowerJointLimit>
+            <upperJointLimit>0.4</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>R_HIP_Y</jointName>
             <motorName>RightHipPitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-0.2</lowerJointLimit>
+            <upperJointLimit>0.2</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
             <jointName>R_KNEE_Y</jointName>
             <motorName>RightKneePitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
+            <lowerJointLimit>-0.03</lowerJointLimit>
+            <upperJointLimit>0.4</upperJointLimit>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
