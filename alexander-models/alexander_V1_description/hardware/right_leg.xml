@@ -124,27 +124,27 @@
     </devices>
     <transmissions>
         <XmlCycloidMotorMechanism>
-            <jointName>R_HIP_Z</jointName>
+            <jointName>RIGHT_HIP_Z</jointName>
             <motorName>RightHipYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <jointName>R_HIP_Y</jointName>
+            <jointName>RIGHT_HIP_Y</jointName>
             <motorName>RightHipPitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <jointName>R_KNEE_Y</jointName>
+            <jointName>RIGHT_KNEE_Y</jointName>
             <motorName>RightKneePitchMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
             <name>R_ANKLE_DIFFERENTIAL</name>
-            <pitchJoint>R_ANKLE_Y</pitchJoint>
-            <rollJoint>R_ANKLE_X</rollJoint>
+            <pitchJoint>RIGHT_ANKLE_Y</pitchJoint>
+            <rollJoint>RIGHT_ANKLE_X</rollJoint>
             <robotSide>right</robotSide>
             <leftMotor>RightAnkleTopMotor</leftMotor>
             <rightMotor>RightAnkleBottomMotor</rightMotor>
