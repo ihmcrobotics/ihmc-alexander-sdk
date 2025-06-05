@@ -124,6 +124,7 @@
     </devices>
     <transmissions>
         <XmlCycloidMotorMechanism>
+            <jointName>LEFT_HIP_Z</jointName>
             <motorName>LeftHipYawMotor</motorName>
             <jointPositionOffset>0.0</jointPositionOffset>
             <lowerJointLimit>-0.3490658504</lowerJointLimit>
