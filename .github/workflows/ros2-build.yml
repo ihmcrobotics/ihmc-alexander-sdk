@@ -1,0 +1,24 @@
+name: ROS 2 build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ros2-build:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        ros_distro: [ jazzy ]
+    container:
+      image: osrf/ros:${{ matrix.ros_distro }}-desktop
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Colcon build
+        run: |
+          /bin/bash -c "source /opt/ros/jazzy/setup.bash && cd alexander_msgs && colcon build"

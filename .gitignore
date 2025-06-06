@@ -67,3 +67,8 @@
 **/generatedTestSuites/*TestSuite.java
 
 !gradle/wrapper/gradle-wrapper.jar
+
+# ROS 2 stuff
+**/build
+**/install
+**/log
