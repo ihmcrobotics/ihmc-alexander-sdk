@@ -1,5 +1,5 @@
 <?xml version = "1.0" ?>
-<robot name="alexander">
+<robot name="Alexander">
 
     <!-- SPINE JOINTS -->
     <joint name="SPINE_Z" type="revolute">
