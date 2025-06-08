@@ -4,6 +4,7 @@
 bool enable_actuators
 bool clear_faults
 bool calibrate
+byte control_state
 uint32 number_of_joints
 
 # Joint Commands for the robot
