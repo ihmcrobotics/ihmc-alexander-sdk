@@ -120,6 +120,12 @@
             <alias>6110</alias>
             <address>0</address>
             <present>true</present>
+            <fxOffset>188.92116507233635</fxOffset>
+            <fyOffset>41.54594015499189</fyOffset>
+            <fzOffset>-474.78600141455195</fzOffset>
+            <txOffset>1.1384460380159669</txOffset>
+            <tyOffset>1.5184652274217516</tyOffset>
+            <tzOffset>15.18584664543155</tzOffset>
         </XmlAtiForceTorqueSensor>
     </devices>
     <transmissions>
