@@ -4,8 +4,10 @@
 bool enable_actuators
 bool clear_faults
 bool calibrate
-byte control_state
+# Control state of the robot, 0 is do nothing, 1 is hold position, 2 is user control
+byte robot_control_state
 uint32 number_of_joints
 
 # Joint Commands for the robot
 alexander_device_msgs/OneDOFJointCommand[<=50] joint_commands
+float64 low_level_master_gain

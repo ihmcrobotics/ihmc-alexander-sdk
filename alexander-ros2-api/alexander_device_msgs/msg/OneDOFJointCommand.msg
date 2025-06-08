@@ -14,4 +14,4 @@ float64 max_torque
 
 # Actuator commands
 bool enable
-byte control_type
+byte joint_control_type
