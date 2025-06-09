@@ -153,7 +153,7 @@
             <jointPositionOffset>-5.4700796158009535</jointPositionOffset>
             <lowerJointLimit>0.0</lowerJointLimit>
             <upperJointLimit>2.445206282</upperJointLimit>
-            <torqueBreakFrequency>12.0</torqueBreakFrequency>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
