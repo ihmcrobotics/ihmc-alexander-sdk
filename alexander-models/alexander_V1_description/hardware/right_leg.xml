@@ -164,8 +164,8 @@
             <leftMotor>RightAnkleTopMotor</leftMotor>
             <rightMotor>RightAnkleBottomMotor</rightMotor>
             <torqueBreakFrequency>25.0</torqueBreakFrequency>
-            <leftMotorOffset>4.812</leftMotorOffset>
-            <rightMotorOffset>-2.163</rightMotorOffset>
+            <leftMotorOffset>4.830640987272334</leftMotorOffset>
+            <rightMotorOffset>-2.1871569689027868</rightMotorOffset>
             <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
             <rollJointUpperLimit>0.436332</rollJointUpperLimit>
             <pitchJointLowerLimit>-1.0472</pitchJointLowerLimit>

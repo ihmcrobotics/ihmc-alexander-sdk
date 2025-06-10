@@ -163,8 +163,8 @@
             <robotSide>left</robotSide>
             <leftMotor>LeftAnkleBottomMotor</leftMotor>
             <rightMotor>LeftAnkleTopMotor</rightMotor>
-            <leftMotorOffset>0.388</leftMotorOffset>
-            <rightMotorOffset>-3.471</rightMotorOffset>
+            <leftMotorOffset>6.681936451455019</leftMotorOffset>
+            <rightMotorOffset>-3.377929893201839</rightMotorOffset>
             <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
             <rollJointUpperLimit>0.436332</rollJointUpperLimit>
