@@ -64,7 +64,7 @@
         <XmlCycloidMotorMechanism>
             <jointName>LEFT_HIP_X</jointName>
             <motorName>LeftHipRollMotor</motorName>
-            <jointPositionOffset>5.632260799863465</jointPositionOffset>
+            <jointPositionOffset>5.632559073909523</jointPositionOffset>
             <lowerJointLimit>-0.3490658504</lowerJointLimit>
             <upperJointLimit>0.872664626</upperJointLimit>
             <torqueBreakFrequency>20.0</torqueBreakFrequency>
@@ -73,7 +73,7 @@
         <XmlCycloidMotorMechanism>
             <jointName>RIGHT_HIP_X</jointName>
             <motorName>RightHipRollMotor</motorName>
-            <jointPositionOffset>3.551346618910519</jointPositionOffset>
+            <jointPositionOffset>3.5528220101504533</jointPositionOffset>
             <lowerJointLimit>-0.872664626</lowerJointLimit>
             <upperJointLimit>0.3490658504</upperJointLimit>
             <torqueBreakFrequency>20.0</torqueBreakFrequency>
