@@ -635,9 +635,9 @@
     <!-- SPINE LINKS -->
     <link name="TORSO_LINK">
         <inertial>
-            <mass value="2.13269743"/> <!-- This probably needs to be updated  -->
+            <mass value="4.352"/> <!-- This probably needs to be updated  -->
             <origin rpy="0 0 0" xyz="-0.034 0.0 0.297"/>
-            <inertia ixx="0.03902511932" ixy="4.89E-06" ixz="0.004054557852" iyy="0.03446374174" iyz="73.67E-06" izz="0.01672505114"/>
+            <inertia ixx="0.078" ixy="9.78E-06" ixz="0.0081" iyy="0.0689" iyz="1.4734E-04" izz="0.0334"/>
         </inertial>
         <visual>
             <geometry>
