@@ -3985,7 +3985,8 @@ vn -0.0016 -0.3415 0.9399
 vn -0.0000 -0.3714 0.9285
 vn -0.0000 0.4229 0.9062
 s 0
-usemtl Steel_-_Satin
+# usemtl Steel_-_Satin
+usemtl Procedural_Car_paint
 f 1//1 2//1 3//1
 f 4//1 2//1 1//1
 f 5//2 4//2 1//2

@@ -393,7 +393,8 @@ vn 29.4463 -44.4090 -84.6213
 
 o N17_24_P02_01_L_Forearm_Outside_structure
 g N17_24_P02_01_L_Forearm_Outside_structure
-usemtl Material__38
+# usemtl Material__38
+usemtl Procedural_Car_paint
 s 1
 f 16//3 15//2 13//1 
 f 43//6 36//5 40//4 
@@ -1466,7 +1467,8 @@ vn 0.0000 -38.6697 -92.2207
 
 o N17_24_P02_05_L_Forearm_Inside_structure_lid
 g N17_24_P02_05_L_Forearm_Inside_structure_lid
-usemtl Material__39
+# usemtl Material__39
+usemtl Procedural_Car_paint
 s 1
 f 126//327 116//326 105//325 
 f 115//330 117//329 72//328 
@@ -3489,7 +3491,8 @@ vn 0.0000 -30.8687 -95.1164
 
 o N17_24_P02_06_L_Forearm_Inside_structure
 g N17_24_P02_06_L_Forearm_Inside_structure
-usemtl Material__40
+# usemtl Material__40
+usemtl Procedural_Car_paint
 s 1
 f 249//1140 318//1139 365//1138 
 f 201//1143 294//1142 483//1141 
@@ -4186,7 +4189,8 @@ vn -30.9017 -71.4588 -62.7593
 
 o N17_24_P02_07_L_Forearm_Outside_structure_lid
 g N17_24_P02_07_L_Forearm_Outside_structure_lid
-usemtl Material__41
+# usemtl Material__41
+usemtl Procedural_Car_paint
 s 1
 f 508//2574 518//2573 506//2572 
 f 501//2577 507//2576 499//2575 
@@ -6949,7 +6953,8 @@ vn -88.6921 -46.1920 0.0000
 
 o N17_24_P02_08_Forearm_Heatsink
 g N17_24_P02_08_Forearm_Heatsink
-usemtl Material__39
+# usemtl Material__39
+usemtl Procedural_Car_paint
 s 1
 f 789//2748 705//2747 592//2746 
 f 810//2751 685//2750 761//2749 
@@ -12886,7 +12891,8 @@ vn -57.7332 17.9312 -79.6577
 
 o N17_24_P02_11_L_Forearm_cover_Outside
 g N17_24_P02_11_L_Forearm_cover_Outside
-usemtl Material__42
+# usemtl Material__42
+usemtl Procedural_Car_paint
 s 1
 f 1034//5052 1082//5051 1067//5050 
 f 1237//5055 1058//5054 1123//5053 
@@ -18189,7 +18195,8 @@ vn -62.0856 -77.8472 9.2300
 
 o N17_24_P02_10_L_Forearm_cover_Inside
 g N17_24_P02_10_L_Forearm_cover_Inside
-usemtl Material__42
+# usemtl Material__42
+usemtl Procedural_Car_paint
 s 1
 f 1691//9447 1719//9446 1699//9445 
 f 1716//9450 1885//9449 2182//9448 
@@ -19507,7 +19514,8 @@ vn 0.0000 -34.2889 93.9376
 
 o N17_24_P02_06_L_Forearm_Inside_structure001
 g N17_24_P02_06_L_Forearm_Inside_structure001
-usemtl Material__40
+# usemtl Material__40
+usemtl Procedural_Car_paint
 s 1
 f 2227//12723 2225//12722 2226//12721 
 f 2230//12726 2229//12725 2233//12724 

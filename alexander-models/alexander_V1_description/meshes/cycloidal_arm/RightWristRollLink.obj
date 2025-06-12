@@ -8804,7 +8804,8 @@ vn 70.7107 24.1845 66.4463
 
 o N17_24_P04_01_L_Motor_housing_wrist_twist
 g N17_24_P04_01_L_Motor_housing_wrist_twist
-usemtl wire_159170179
+# usemtl wire_159170179
+usemtl Procedural_Car_paint
 s 1
 f 3//3 2//2 1//1 
 f 4//6 2//5 3//4 
@@ -14392,7 +14393,8 @@ vn 76.5705 0.0000 64.3192
 
 o N17_24_P03_06_Wrist_heatsink
 g N17_24_P03_06_Wrist_heatsink
-usemtl Material__128
+# usemtl Material__128
+usemtl Procedural_Car_paint
 s 1
 f 1396//7401 1395//7400 1394//7399 
 f 1397//7404 1395//7403 1396//7402 
@@ -20010,7 +20012,8 @@ vn -0.0000 -95.1057 -30.9017
 
 o N17_24_P03_08_L_Wrist_Link_Cover_Inside
 g N17_24_P03_08_L_Wrist_Link_Cover_Inside
-usemtl Material__137
+# usemtl Material__137
+usemtl Procedural_Car_paint
 s 1
 f 1858//10047 1857//10046 1856//10045 
 f 1861//10050 1860//10049 1859//10048 
@@ -24156,7 +24159,8 @@ vn -38.6169 44.3131 -80.9017
 
 o N17_24_P03_09_L_Wrist_Link_Cover_Outside
 g N17_24_P03_09_L_Wrist_Link_Cover_Outside
-usemtl Material__137
+# usemtl Material__137
+usemtl Procedural_Car_paint
 s 1
 f 2545//14082 2544//14081 2543//14080 
 f 2548//14085 2547//14084 2546//14083 

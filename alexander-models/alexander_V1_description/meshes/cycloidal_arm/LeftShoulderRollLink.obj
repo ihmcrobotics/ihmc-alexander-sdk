@@ -281,7 +281,8 @@ vn 0.0000 0.0000 -100.0000
 
 o Body1
 g Body1
-usemtl Opaque_67_72_77_
+# usemtl Opaque_67_72_77_
+usemtl Procedural_Car_paint
 s 1
 f 25//3 1//2 26//1 
 f 2//6 1//5 25//4 
@@ -635,7 +636,8 @@ vn 0.0000 0.0000 -100.0000
 
 o Body4
 g Body4
-usemtl Opaque_67_72_77_
+# usemtl Opaque_67_72_77_
+usemtl Procedural_Car_paint
 s 1
 f 78//219 54//218 53//217 
 f 55//222 54//221 78//220 
@@ -913,7 +915,8 @@ vn -96.5926 -25.8819 0.0000
 
 o Body2
 g Body2
-usemtl Opaque_165_165_165_
+#usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 105//435 152//434 106//433 
 f 129//438 152//437 105//436 
@@ -3481,7 +3484,8 @@ vn 88.5998 25.6420 -38.6337
 
 o Body1_1
 g Body1_1
-usemtl Opaque_165_165_165_
+#usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 172//579 154//578 153//577 
 f 171//582 154//581 172//580 
@@ -12912,7 +12916,8 @@ vn 0.0000 -58.8394 80.8574
 
 o Body1_2
 g Body1_2
-usemtl Opaque_165_165_165_
+#usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 571//2706 533//2705 532//2704 
 f 568//2709 533//2708 571//2707 
