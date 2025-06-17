@@ -1,0 +1,3 @@
+[submodule "alexander-ros2-api/ihmc_psyonic_ros2"]
+	path = alexander-ros2-api/ihmc_psyonic_ros2
+	url = git@github.com:ihmcrobotics/ihmc_psyonic_ros2.git
