@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="media/alexander_running.png" width="30%" /><br>
+  <a href="https://robots.ihmc.us/">IHMC Robotics</a>
+</p>
+
 # ihmc-alexander-sdk
 Light SDK consisting of meshes and URDF description of Alexander robot model, along with a ROS2 package containing messages for sending low-level control commands to and receiving low-level robot data from IHMC's Alexander humanoid.
 
