@@ -132,10 +132,10 @@
         <XmlCycloidMotorMechanism>
             <jointName>LEFT_HIP_Z</jointName>
             <motorName>LeftHipYawMotor</motorName>
-            <jointPositionOffset>6.020988894020327</jointPositionOffset>
+            <jointPositionOffset>6.021851758213513</jointPositionOffset>
             <lowerJointLimit>-0.3490658504</lowerJointLimit>
             <upperJointLimit>1.0472</upperJointLimit>
-            <torqueBreakFrequency>25.0</torqueBreakFrequency>
+            <torqueBreakFrequency>20.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
@@ -163,8 +163,9 @@
             <robotSide>left</robotSide>
             <leftMotor>LeftAnkleBottomMotor</leftMotor>
             <rightMotor>LeftAnkleTopMotor</rightMotor>
-            <leftMotorOffset>0.388</leftMotorOffset>
-            <rightMotorOffset>-3.471</rightMotorOffset>
+            <!--Weird offset stuff is happening with left motor, use 0.398 if not working -3.377929893201839-->
+            <leftMotorOffset>0.4383593799640606</leftMotorOffset>
+            <rightMotorOffset>-3.4169559524258415</rightMotorOffset>
             <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
             <rollJointUpperLimit>0.436332</rollJointUpperLimit>
