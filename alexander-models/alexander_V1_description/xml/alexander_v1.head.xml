@@ -1,0 +1,56 @@
+<mujoco model="Alexander">
+  <default>
+    <joint limited="true" damping="0.01" armature="0.01" frictionloss="0.01" />
+    <geom condim="4" contype="1" conaffinity="15" friction="0.9 0.2 0.2" solref="0.001 2" />
+    <motor ctrllimited="true" />
+    <equality solref="0.001 2" />
+    <default class="visualgeom">
+      <geom material="visualgeom" condim="1" contype="0" conaffinity="0" />
+    </default>
+  </default>
+
+  <compiler angle="radian" meshdir="../meshes/" eulerseq="zyx" autolimits="true" />
+
+  <asset>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="gray" rgba="0.5 0.5 0.5 1.0" />
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="head.obj" file="head.obj" />
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="ground" type="plane" pos="0 0 0" size="10 10 0.001" quat="1 0 0 0" material="matplane" condim="3" conaffinity="15" />
+    <body name="root" pos="0 0 -0.257953" quat="1 0 0 0">
+      <freejoint name="root" />
+      <site name="root_site" pos="0 0 0" quat="1 0 0 0" />
+      <body name="TORSO_LINK" pos="0 0 0" quat="1 0 0 0">
+        <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0.001" diaginertia="1e-05 1e-05 1e-05" />
+        <body name="NECK_Z_LINK" pos="0 0 0.307953" quat="1.0 0.0 0.0 0.0">
+          <joint name="NECK_Z" type="hinge" range="-1.5708 1.5708" axis="0 0 1" />
+          <inertial pos="0.007143 0.006943 0.109823" quat="1.0 0.0 0.0 0.0" mass="1.141" diaginertia="0.007475898 0.007407578 0.00109269" />
+          <geom name="NECK_Z_LINK_visual_0" pos="0 0 0.0" quat="1.0 0.0 0.0 0.0" material="gray" type="cylinder" size="0.05 0.05" />
+          <body name="HEAD_LINK" pos="0.025 0.01 0.207252" quat="1.0 0.0 0.0 0.0">
+            <joint name="NECK_Y" type="hinge" range="-1.0472 1.0472" axis="0 1 0" />
+            <inertial pos="0.03237 -0.013568 0.007163" quat="1.0 0.0 0.0 0.0" mass="1.677" diaginertia="0.006026191 0.008182071 0.00644909" />
+            <geom name="HEAD_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="head.obj" />
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="NECK_Z_ctrl" joint="NECK_Z" kp="40.00000000" kv="2.00000000" forcerange="-20.00000000 20.00000000" forcelimited="true" ctrlrange="-1.5708 1.5708" ctrllimited="true" />
+    <position name="NECK_Y_ctrl" joint="NECK_Y" kp="40.00000000" kv="2.00000000" forcerange="-20.00000000 20.00000000" forcelimited="true" ctrlrange="-1.0472 1.0472" ctrllimited="true" />
+  </actuator>
+
+  <sensor>
+    <framepos name="base_link_pos" objtype="site" objname="root_site" />
+    <framequat name="base_link_quat" objtype="site" objname="root_site" />
+    <framelinvel name="base_link_vel" objtype="site" objname="root_site" />
+    <frameangvel name="base_link_ang_vel" objtype="site" objname="root_site" />
+  </sensor>
+</mujoco>

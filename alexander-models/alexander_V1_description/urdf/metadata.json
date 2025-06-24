@@ -1,0 +1,73 @@
+{
+  "joint_params": {
+    "default": {
+      "kp": 40,
+      "kd": 2
+    }
+  },
+  "imus": [
+    {
+      "link_name": "PELVIS_STIM_IMU_LINK",
+      "pos": [-0.08051472, 0.01225028, -0.08687724],
+      "quat": [0.7071069, 0, 0, 0.7071067],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "LEFT_HIP_X_IMU_LINK",
+      "pos": [-0.01488788, 0.10145013,-0.01922309],
+      "quat": [0.5, -0.5, 0.5,0.5],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "LEFT_THIGH_IMU_LINK",
+      "pos": [-0.21194, 0.03746, 0.10004],
+      "quat": [0.7071069, 0, 0, 0.7071067],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "LEFT_SHIN_IMU_LINK",
+      "pos": [-0.15664831, 0.00084826, 0.05655120],
+      "quat": [0.5399826,  0.4565292, 0.4565291, -0.5399825],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "LEFT_FOOT_IMU_LINK",
+      "pos": [-0.04979705, 0.01180178, -0.03575526],
+      "quat": [0.7071069, 0, 0, 0.7071067],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "RIGHT_HIP_X_IMU_LINK",
+      "pos": [-0.01488788, -0.07694987, -0.01922309],
+      "quat": [0.5, -0.5, -0.5, -0.5],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "RIGHT_THIGH_IMU_LINK",
+      "pos": [-0.21194191, -0.033541826, 0.10003618],
+      "quat": [0.7071069, 0, 0, 0.7071067],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "RIGHT_SHIN_IMU_LINK",
+      "pos": [-0.15674961, -0.00875818, 0],
+      "quat": [0.5399826, 0.4565292, 0.4565291, -0.5399825],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    },
+    {
+      "link_name": "RIGHT_FOOT_IMU_LINK",
+      "pos": [-0.04979705, 0.01180178, -0.03575526],
+      "quat": [0.7071069, 0, 0, 0.7071067],
+      "acc_noise": 0.017,
+      "gyro_noise": 0.0002
+    }
+  ]
+}
