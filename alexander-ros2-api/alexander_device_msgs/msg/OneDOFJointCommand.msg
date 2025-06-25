@@ -12,7 +12,8 @@ float64 max_position_error
 float64 max_velocity_error
 float64 max_torque
 
-# Actuator commands
+# Enable Actuator Command
 bool enable
+
 # Joint control type, 0 is Position, 1 is Velocity, 2 is Effort, 3 disables the control
 byte joint_control_type
