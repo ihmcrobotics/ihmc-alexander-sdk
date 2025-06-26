@@ -239,7 +239,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/left_thigh.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/LeftThigh.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
@@ -341,7 +341,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/left_ankle.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/AnklePitchLink.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
@@ -354,7 +354,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/left_foot.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/Foot.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
@@ -471,7 +471,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/right_thigh.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/RightThigh.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
@@ -574,7 +574,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/right_ankle.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/AnklePitchLink.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
@@ -587,7 +587,7 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="package://alexander_V1_description/meshes/legs/right_foot.obj"/>
+                <mesh filename="package://alexander_V1_description/meshes/legs/Foot.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
         </visual>
