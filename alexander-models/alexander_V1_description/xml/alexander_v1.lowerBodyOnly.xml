@@ -1,0 +1,198 @@
+<mujoco model="Alexander">
+  <default>
+    <joint limited="true" damping="0.01" armature="0.01" frictionloss="0.01" />
+    <geom condim="4" contype="1" conaffinity="15" friction="0.9 0.2 0.2" solref="0.001 2" />
+    <motor ctrllimited="true" />
+    <equality solref="0.001 2" />
+    <default class="visualgeom">
+      <geom material="visualgeom" condim="1" contype="0" conaffinity="0" />
+    </default>
+  </default>
+
+  <compiler angle="radian" meshdir="../meshes/" eulerseq="zyx" autolimits="true" />
+
+  <asset>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="pelvis.obj" file="legs/pelvis.obj" />
+    <mesh name="left_hip_roll.obj" file="legs/left_hip_roll.obj" />
+    <mesh name="left_hip_yaw.obj" file="legs/left_hip_yaw.obj" />
+    <mesh name="left_thigh.obj" file="legs/left_thigh.obj" />
+    <mesh name="left_shin.obj" file="legs/left_shin.obj" />
+    <mesh name="left_ankle.obj" file="legs/left_ankle.obj" />
+    <mesh name="left_foot.obj" file="legs/left_foot.obj" />
+    <mesh name="right_hip_roll.obj" file="legs/right_hip_roll.obj" />
+    <mesh name="right_hip_yaw.obj" file="legs/right_hip_yaw.obj" />
+    <mesh name="right_thigh.obj" file="legs/right_thigh.obj" />
+    <mesh name="right_shin.obj" file="legs/right_shin.obj" />
+    <mesh name="right_ankle.obj" file="legs/right_ankle.obj" />
+    <mesh name="right_foot.obj" file="legs/right_foot.obj" />
+    <mesh name="torso.obj" file="torso.obj" />
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="ground" type="plane" pos="0 0 0" size="10 10 0.001" quat="1 0 0 0" material="matplane" condim="3" conaffinity="15" />
+    <body name="root" pos="0 0 0.9395" quat="1 0 0 0">
+      <freejoint name="root" />
+      <site name="root_site" pos="0 0 0" quat="1 0 0 0" />
+      <body name="PELVIS_LINK" pos="0 0 0" quat="1 0 0 0">
+        <inertial pos="-0.08354287 0.00005291 -0.03484828" quat="1.0 0.0 0.0 0.0" mass="7.700" diaginertia="0.02778797216 0.04197223079 0.04864293163" />
+        <geom name="PELVIS_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="pelvis.obj" />
+        <body name="LEFT_HIP_X_LINK" pos="-0.162 0.0595 -0.015" quat="1.0 0.0 0.0 0.0">
+          <joint name="LEFT_HIP_X" type="hinge" range="-0.3490658504 0.872664626" axis="1 0 0" />
+          <inertial pos="0.04350911 0.08708606 -0.03525761" quat="1.0 0.0 0.0 0.0" mass="1.933" diaginertia="0.003878412843 0.004286297831 0.004589226755" />
+          <geom name="LEFT_HIP_X_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_hip_roll.obj" />
+          <body name="LEFT_HIP_Z_LINK" pos="0.06 0.1 -0.08" quat="1.0 0.0 0.0 0.0">
+            <joint name="LEFT_HIP_Z" type="hinge" range="-0.3490658504 1.0472" axis="0 0 1" />
+            <inertial pos="0.04549595 -0.00525571 -0.00937454" quat="1.0 0.0 0.0 0.0" mass="0.777" diaginertia="0.003193596704 0.003470518726 0.003149418679" />
+            <geom name="LEFT_HIP_Z_LINK_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_hip_yaw.obj" />
+            <body name="LEFT_THIGH" pos="0.1045 -0.0573 -0.0525" quat="1.0 0.0 0.0 0.0">
+              <joint name="LEFT_HIP_Y" type="hinge" range="-2.61799 0.785398" axis="0 1 0" />
+              <inertial pos="0.01417302 0.03268781 -0.10548314" quat="1.0 0.0 0.0 0.0" mass="8.200" diaginertia="0.09801939303 0.1029817685 0.02966682761" />
+              <geom name="LEFT_THIGH_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_thigh.obj" />
+              <body name="LEFT_SHIN" pos="0 0.018 -0.32" quat="1.0 0.0 0.0 0.0">
+                <joint name="LEFT_KNEE_Y" type="hinge" range="0 2.445206282" axis="0 1 0" />
+                <inertial pos="0.03807965 -0.00108105 -0.12410027" quat="1.0 0.0 0.0 0.0" mass="7.400" diaginertia="0.1187114458 0.123287552 0.021118268" />
+                <geom name="LEFT_SHIN_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_shin.obj" />
+                <body name="LEFT_ANKLE_Y_LINK" pos="0 0 -0.41" quat="1.0 0.0 0.0 0.0">
+                  <joint name="LEFT_ANKLE_Y" type="hinge" range="-1.0472 0.523599" axis="0 1 0" />
+                  <inertial pos="2.94E-07 2.22E-07 -0.00462997" quat="1.0 0.0 0.0 0.0" mass="0.04972436486" diaginertia="1.707859874e-05 7.0364221e-06 1.824148082e-05" />
+                  <geom name="LEFT_ANKLE_Y_LINK_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_ankle.obj" />
+                  <body name="LEFT_FOOT" pos="0 0 -0.012" quat="1.0 0.0 0.0 0.0">
+                    <joint name="LEFT_ANKLE_X" type="hinge" range="-0.436332 0.436332" axis="1 0 0" />
+                    <inertial pos="0.03793372 -0.00000219 -0.0443663" quat="1.0 0.0 0.0 0.0" mass="1.264275635" diaginertia="0.00129422863 0.003796967682 0.004004069097" />
+                    <geom name="LEFT_FOOT_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="left_foot.obj" />
+                    <body name="LEFT_FOOT_IMU_LINK" pos="-0.03575526 0.01180178 -0.04979705" quat="0.7071068967259818 0.0 0.0 0.7071066656470943">
+                      <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                      <site name="LEFT_FOOT_IMU_LINK_site" pos="-0.04979705 0.01180178 -0.03575526" quat="0.7071069 0.0 0.0 0.7071067" size="0.01" />
+                    </body>
+                  </body>
+                </body>
+                <body name="LEFT_SHIN_IMU_LINK" pos="0.05655120 0.00084826 -0.15664831" quat="0.5399826309812834 0.456529212248219 -0.45652906305682667 -0.5399824545177442">
+                  <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                  <site name="LEFT_SHIN_IMU_LINK_site" pos="-0.15664831 0.00084826 0.0565512" quat="0.5399826 0.4565292 0.4565291 -0.5399825" size="0.01" />
+                </body>
+              </body>
+              <body name="LEFT_THIGH_IMU_LINK" pos="0.10004 0.03746 -0.21194" quat="0.4680657519331888 0.5300137878061918 0.5300136146004192 0.46806559897171474">
+                <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                <site name="LEFT_THIGH_IMU_LINK_site" pos="-0.21194 0.03746 0.10004" quat="0.7071069 0.0 0.0 0.7071067" size="0.01" />
+              </body>
+            </body>
+          </body>
+          <body name="LEFT_HIP_X_IMU_LINK" pos="-0.01922309 0.10145013 -0.01488788" quat="0.5000001633974483 -0.4999999999999733 -0.49999983660255165 0.4999999999999733">
+            <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+            <site name="LEFT_HIP_X_IMU_LINK_site" pos="-0.01488788 0.10145013 -0.01922309" quat="0.5 -0.5 0.5 0.5" size="0.01" />
+          </body>
+        </body>
+        <body name="RIGHT_HIP_X_LINK" pos="-0.162 -0.0595 -0.015" quat="1.0 0.0 0.0 0.0">
+          <joint name="RIGHT_HIP_X" type="hinge" range="-0.872664626 0.3490658504" axis="1 0 0" />
+          <inertial pos="0.04351957 -0.08688935 -0.03525357" quat="1.0 0.0 0.0 0.0" mass="1.933" diaginertia="0.003879453534 0.004284419245 0.004587390581" />
+          <geom name="RIGHT_HIP_X_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_hip_roll.obj" />
+          <body name="RIGHT_HIP_Z_LINK" pos="0.06 -0.1 -0.08" quat="1.0 0.0 0.0 0.0">
+            <joint name="RIGHT_HIP_Z" type="hinge" range="-1.0472 0.3490658504" axis="0 0 1" />
+            <inertial pos="0.04549274 0.00525784 -0.00937505" quat="1.0 0.0 0.0 0.0" mass="0.777" diaginertia="0.003193609391 0.003470371645 0.003149209997" />
+            <geom name="RIGHT_HIP_Z_LINK_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_hip_yaw.obj" />
+            <body name="RIGHT_THIGH" pos="0.1045 0.0573 -0.0525" quat="1.0 0.0 0.0 0.0">
+              <joint name="RIGHT_HIP_Y" type="hinge" range="-2.61799 0.785398" axis="0 1 0" />
+              <inertial pos="0.01411846 -0.03282392 -0.10542795" quat="1.0 0.0 0.0 0.0" mass="8.200" diaginertia="0.09811603665 0.1030417396 0.02964871355" />
+              <geom name="RIGHT_THIGH_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_thigh.obj" />
+              <body name="RIGHT_SHIN" pos="0 -0.018 -0.32" quat="1.0 0.0 0.0 0.0">
+                <joint name="RIGHT_KNEE_Y" type="hinge" range="0 2.445206282" axis="0 1 0" />
+                <inertial pos="0.03807648 0.00113375 -0.12408765" quat="1.0 0.0 0.0 0.0" mass="7.400" diaginertia="0.1171311422 0.1214017091 0.02090879418" />
+                <geom name="RIGHT_SHIN_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_shin.obj" />
+                <body name="RIGHT_ANKLE_Y_LINK" pos="0 0 -0.41" quat="1.0 0.0 0.0 0.0">
+                  <joint name="RIGHT_ANKLE_Y" type="hinge" range="-1.0472 0.523599" axis="0 1 0" />
+                  <inertial pos="2.94E-07 2.22E-07 -0.00462997" quat="1.0 0.0 0.0 0.0" mass="0.04972436486" diaginertia="1.707859874e-05 7.0364221e-06 1.824148082e-05" />
+                  <geom name="RIGHT_ANKLE_Y_LINK_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_ankle.obj" />
+                  <body name="RIGHT_FOOT" pos="0 0 -0.012" quat="1.0 0.0 0.0 0.0">
+                    <joint name="RIGHT_ANKLE_X" type="hinge" range="-0.436332 0.436332" axis="1 0 0" />
+                    <inertial pos="0.03793372 -0.00000219 -0.0443663" quat="1.0 0.0 0.0 0.0" mass="1.264275635" diaginertia="0.00129422863 0.003796967682 0.004004069097" />
+                    <geom name="RIGHT_FOOT_visual_0" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="right_foot.obj" />
+                    <body name="RIGHT_FOOT_IMU_LINK" pos="-0.03575526 0.01180178 -0.04979705" quat="0.7071068967259818 0.0 0.0 0.7071066656470943">
+                      <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                      <site name="RIGHT_FOOT_IMU_LINK_site" pos="-0.04979705 0.01180178 -0.03575526" quat="0.7071069 0.0 0.0 0.7071067" size="0.01" />
+                    </body>
+                  </body>
+                </body>
+                <body name="RIGHT_SHIN_IMU_LINK" pos="0.05673025 -0.00875818 -0.15674961" quat="0.5399826309812834 0.456529212248219 -0.45652906305682667 -0.5399824545177442">
+                  <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                  <site name="RIGHT_SHIN_IMU_LINK_site" pos="-0.15674961 -0.00875818 0.0" quat="0.5399826 0.4565292 0.4565291 -0.5399825" size="0.01" />
+                </body>
+              </body>
+              <body name="RIGHT_THIGH_IMU_LINK" pos="0.10003618 -0.033541826 -0.21194191" quat="0.4680657519331888 0.5300137878061918 0.5300136146004192 0.46806559897171474">
+                <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+                <site name="RIGHT_THIGH_IMU_LINK_site" pos="-0.21194191 -0.033541826 0.10003618" quat="0.7071069 0.0 0.0 0.7071067" size="0.01" />
+              </body>
+            </body>
+          </body>
+          <body name="RIGHT_HIP_X_IMU_LINK" pos="-0.01922309 -0.07694987 -0.01488788" quat="0.5000001633974483 -0.4999999999999733 -0.49999983660255165 0.4999999999999733">
+            <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0" diaginertia="0.0 0.0 0.0" />
+            <site name="RIGHT_HIP_X_IMU_LINK_site" pos="-0.01488788 -0.07694987 -0.01922309" quat="0.5 -0.5 -0.5 -0.5" size="0.01" />
+          </body>
+        </body>
+        <body name="TORSO_LINK" pos="0.0 0 0.018" quat="1.0 0.0 0.0 0.0">
+          <joint name="SPINE_Z" type="hinge" range="-0.5235987756 0.5235987756" axis="0 0 1" />
+          <inertial pos="-0.034 0.0 0.297" quat="1.0 0.0 0.0 0.0" mass="4.352" diaginertia="0.078 0.0689 0.0334" />
+          <geom name="TORSO_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="torso.obj" />
+        </body>
+        <body name="PELVIS_STIM_IMU_LINK" pos="-0.08687724 0.01225028 -0.08051472" quat="0.7071068967259818 0.0 0.0 0.7071066656470943">
+          <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0.0" diaginertia="0.0 0.0 0.0" />
+          <site name="PELVIS_STIM_IMU_LINK_site" pos="-0.08051472 0.01225028 -0.08687724" quat="0.7071069 0.0 0.0 0.7071067" size="0.01" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="LEFT_HIP_X_ctrl" joint="LEFT_HIP_X" kp="40.00000000" kv="2.00000000" forcerange="-150.00000000 150.00000000" forcelimited="true" ctrlrange="-0.3490658504 0.872664626" ctrllimited="true" />
+    <position name="LEFT_HIP_Z_ctrl" joint="LEFT_HIP_Z" kp="40.00000000" kv="2.00000000" forcerange="-60.00000000 60.00000000" forcelimited="true" ctrlrange="-0.3490658504 1.0472" ctrllimited="true" />
+    <position name="LEFT_HIP_Y_ctrl" joint="LEFT_HIP_Y" kp="40.00000000" kv="2.00000000" forcerange="-200.00000000 200.00000000" forcelimited="true" ctrlrange="-2.61799 0.785398" ctrllimited="true" />
+    <position name="LEFT_KNEE_Y_ctrl" joint="LEFT_KNEE_Y" kp="40.00000000" kv="2.00000000" forcerange="-200.00000000 200.00000000" forcelimited="true" ctrlrange="0.0 2.445206282" ctrllimited="true" />
+    <position name="LEFT_ANKLE_Y_ctrl" joint="LEFT_ANKLE_Y" kp="40.00000000" kv="2.00000000" forcerange="-180.00000000 180.00000000" forcelimited="true" ctrlrange="-1.0472 0.523599" ctrllimited="true" />
+    <position name="LEFT_ANKLE_X_ctrl" joint="LEFT_ANKLE_X" kp="40.00000000" kv="2.00000000" forcerange="-90.00000000 90.00000000" forcelimited="true" ctrlrange="-0.436332 0.436332" ctrllimited="true" />
+    <position name="RIGHT_HIP_X_ctrl" joint="RIGHT_HIP_X" kp="40.00000000" kv="2.00000000" forcerange="-150.00000000 150.00000000" forcelimited="true" ctrlrange="-0.872664626 0.3490658504" ctrllimited="true" />
+    <position name="RIGHT_HIP_Z_ctrl" joint="RIGHT_HIP_Z" kp="40.00000000" kv="2.00000000" forcerange="-60.00000000 60.00000000" forcelimited="true" ctrlrange="-1.0472 0.3490658504" ctrllimited="true" />
+    <position name="RIGHT_HIP_Y_ctrl" joint="RIGHT_HIP_Y" kp="40.00000000" kv="2.00000000" forcerange="-200.00000000 200.00000000" forcelimited="true" ctrlrange="-2.61799 0.785398" ctrllimited="true" />
+    <position name="RIGHT_KNEE_Y_ctrl" joint="RIGHT_KNEE_Y" kp="40.00000000" kv="2.00000000" forcerange="-200.00000000 200.00000000" forcelimited="true" ctrlrange="0.0 2.445206282" ctrllimited="true" />
+    <position name="RIGHT_ANKLE_Y_ctrl" joint="RIGHT_ANKLE_Y" kp="40.00000000" kv="2.00000000" forcerange="-180.00000000 180.00000000" forcelimited="true" ctrlrange="-1.0472 0.523599" ctrllimited="true" />
+    <position name="RIGHT_ANKLE_X_ctrl" joint="RIGHT_ANKLE_X" kp="40.00000000" kv="2.00000000" forcerange="-90.00000000 90.00000000" forcelimited="true" ctrlrange="-0.436332 0.436332" ctrllimited="true" />
+    <position name="SPINE_Z_ctrl" joint="SPINE_Z" kp="40.00000000" kv="2.00000000" forcerange="-150.00000000 150.00000000" forcelimited="true" ctrlrange="-0.5235987756 0.5235987756" ctrllimited="true" />
+  </actuator>
+
+  <sensor>
+    <framepos name="base_link_pos" objtype="site" objname="root_site" />
+    <framequat name="base_link_quat" objtype="site" objname="root_site" />
+    <framelinvel name="base_link_vel" objtype="site" objname="root_site" />
+    <frameangvel name="base_link_ang_vel" objtype="site" objname="root_site" />
+    <accelerometer name="PELVIS_STIM_IMU_LINK_acc" site="PELVIS_STIM_IMU_LINK_site" noise="0.017" />
+    <gyro name="PELVIS_STIM_IMU_LINK_gyro" site="PELVIS_STIM_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="PELVIS_STIM_IMU_LINK_mag" site="PELVIS_STIM_IMU_LINK_site" />
+    <accelerometer name="LEFT_HIP_X_IMU_LINK_acc" site="LEFT_HIP_X_IMU_LINK_site" noise="0.017" />
+    <gyro name="LEFT_HIP_X_IMU_LINK_gyro" site="LEFT_HIP_X_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="LEFT_HIP_X_IMU_LINK_mag" site="LEFT_HIP_X_IMU_LINK_site" />
+    <accelerometer name="LEFT_THIGH_IMU_LINK_acc" site="LEFT_THIGH_IMU_LINK_site" noise="0.017" />
+    <gyro name="LEFT_THIGH_IMU_LINK_gyro" site="LEFT_THIGH_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="LEFT_THIGH_IMU_LINK_mag" site="LEFT_THIGH_IMU_LINK_site" />
+    <accelerometer name="LEFT_SHIN_IMU_LINK_acc" site="LEFT_SHIN_IMU_LINK_site" noise="0.017" />
+    <gyro name="LEFT_SHIN_IMU_LINK_gyro" site="LEFT_SHIN_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="LEFT_SHIN_IMU_LINK_mag" site="LEFT_SHIN_IMU_LINK_site" />
+    <accelerometer name="LEFT_FOOT_IMU_LINK_acc" site="LEFT_FOOT_IMU_LINK_site" noise="0.017" />
+    <gyro name="LEFT_FOOT_IMU_LINK_gyro" site="LEFT_FOOT_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="LEFT_FOOT_IMU_LINK_mag" site="LEFT_FOOT_IMU_LINK_site" />
+    <accelerometer name="RIGHT_HIP_X_IMU_LINK_acc" site="RIGHT_HIP_X_IMU_LINK_site" noise="0.017" />
+    <gyro name="RIGHT_HIP_X_IMU_LINK_gyro" site="RIGHT_HIP_X_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="RIGHT_HIP_X_IMU_LINK_mag" site="RIGHT_HIP_X_IMU_LINK_site" />
+    <accelerometer name="RIGHT_THIGH_IMU_LINK_acc" site="RIGHT_THIGH_IMU_LINK_site" noise="0.017" />
+    <gyro name="RIGHT_THIGH_IMU_LINK_gyro" site="RIGHT_THIGH_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="RIGHT_THIGH_IMU_LINK_mag" site="RIGHT_THIGH_IMU_LINK_site" />
+    <accelerometer name="RIGHT_SHIN_IMU_LINK_acc" site="RIGHT_SHIN_IMU_LINK_site" noise="0.017" />
+    <gyro name="RIGHT_SHIN_IMU_LINK_gyro" site="RIGHT_SHIN_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="RIGHT_SHIN_IMU_LINK_mag" site="RIGHT_SHIN_IMU_LINK_site" />
+    <accelerometer name="RIGHT_FOOT_IMU_LINK_acc" site="RIGHT_FOOT_IMU_LINK_site" noise="0.017" />
+    <gyro name="RIGHT_FOOT_IMU_LINK_gyro" site="RIGHT_FOOT_IMU_LINK_site" noise="0.0002" />
+    <magnetometer name="RIGHT_FOOT_IMU_LINK_mag" site="RIGHT_FOOT_IMU_LINK_site" />
+  </sensor>
+</mujoco>

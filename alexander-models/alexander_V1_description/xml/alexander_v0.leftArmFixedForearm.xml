@@ -1,0 +1,70 @@
+<mujoco model="Alexander">
+  <default>
+    <joint limited="true" damping="0.01" armature="0.01" frictionloss="0.01" />
+    <geom condim="4" contype="1" conaffinity="15" friction="0.9 0.2 0.2" solref="0.001 2" />
+    <motor ctrllimited="true" />
+    <equality solref="0.001 2" />
+    <default class="visualgeom">
+      <geom material="visualgeom" condim="1" contype="0" conaffinity="0" />
+    </default>
+  </default>
+
+  <compiler angle="radian" meshdir="../meshes/" eulerseq="zyx" autolimits="true" />
+
+  <asset>
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".0 .0 .0" rgb2=".8 .8 .8" width="100" height="100" />
+    <material name="matplane" reflectance="0." texture="texplane" texrepeat="1 1" texuniform="true" />
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="LeftShoulderPitchLink.obj" file="cycloidal_arm/LeftShoulderPitchLink.obj" />
+    <mesh name="LeftShoulderRollLink_shortBicep.obj" file="cycloidal_arm/LeftShoulderRollLink_shortBicep.obj" />
+    <mesh name="LeftShoulderYawLink.obj" file="cycloidal_arm/LeftShoulderYawLink.obj" />
+    <mesh name="LEFT_ELBOW_PITCH_LINK_413mm_LENGTH.obj" file="cycloidal_arm/LEFT_ELBOW_PITCH_LINK_413mm_LENGTH.obj" />
+  </asset>
+
+  <worldbody>
+    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+    <geom name="ground" type="plane" pos="0 0 0" size="10 10 0.001" quat="1 0 0 0" material="matplane" condim="3" conaffinity="15" />
+    <body name="root" pos="0 0 0.1" quat="1 0 1 0">
+      <freejoint name="root" />
+      <site name="root_site" pos="0 0 0" quat="1 0 0 0" />
+      <body name="TORSO_LINK" pos="0 0 0" quat="1 0 0 0">
+        <inertial pos="0 0 0" quat="1.0 0.0 0.0 0.0" mass="0.001" diaginertia="1e-05 1e-05 1e-05" />
+        <body name="LEFT_SHOULDER_Y_LINK" pos="-0.025 0.1 0.214" quat="0.9396925696192966 0.34202028390474665 0.0 0.0">
+          <joint name="LEFT_SHOULDER_Y" type="hinge" range="-3.141592 1.22173" axis="0.0 1.0 0.0" />
+          <inertial pos="-0.00264 0.12135 -0.006824" quat="1.0 0.0 0.0 0.0" mass="2.99" diaginertia="0.0111046 0.0051699 0.01176" />
+          <geom name="LEFT_SHOULDER_Y_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="LeftShoulderPitchLink.obj" />
+          <body name="LEFT_SHOULDER_X_LINK" pos="0.0 0.15676000 -0.01300000" quat="0.9396925696192966 -0.34202028390474665 0.0 0.0">
+            <joint name="LEFT_SHOULDER_X" type="hinge" range="-0.349066 2.79253" axis="1 0 0" />
+            <inertial pos="0.01251711 0.0188309 -0.03849849" quat="1.0 0.0 0.0 0.0" mass="0.972" diaginertia="0.0029485 0.0023587 0.0014366" />
+            <geom name="LEFT_SHOULDER_X_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="LeftShoulderRollLink_shortBicep.obj" />
+            <body name="LEFT_SHOULDER_Z_LINK" pos="0.0 0.035 0.0" quat="1.0 0.0 0.0 0.0">
+              <joint name="LEFT_SHOULDER_Z" type="hinge" range="-1.91986 1.22173" axis="0.0 0.0 1.0" />
+              <inertial pos="0.00510403 0.00314332 -0.21695413" quat="1.0 0.0 0.0 0.0" mass="2.91" diaginertia="0.0267829 0.0265514 0.003052" />
+              <geom name="LEFT_SHOULDER_Z_LINK_visual_0" pos="0.0 0.0 0.0867" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="LeftShoulderYawLink.obj" />
+              <body name="LEFT_ELBOW_PITCH_LINK" pos="0.015 0.0 -0.3127" quat="1.0 0.0 0.0 0.0">
+                <joint name="LEFT_ELBOW_Y" type="hinge" range="-2.35619 0.174532925" axis="0.0 1.0 0.0" />
+                <inertial pos="-0.01090935 -0.01147189 -0.10388715" quat="1.0 0.0 0.0 0.0" mass="0.616" diaginertia="0.00760733 0.00767556 0.0004554" />
+                <geom name="LEFT_ELBOW_PITCH_LINK_visual_0" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" material="default_material" type="mesh" mesh="LEFT_ELBOW_PITCH_LINK_413mm_LENGTH.obj" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="LEFT_SHOULDER_Y_ctrl" joint="LEFT_SHOULDER_Y" kp="40.00000000" kv="2.00000000" forcerange="-150.00000000 150.00000000" forcelimited="true" ctrlrange="-3.141592 1.22173" ctrllimited="true" />
+    <position name="LEFT_SHOULDER_X_ctrl" joint="LEFT_SHOULDER_X" kp="40.00000000" kv="2.00000000" forcerange="-150.00000000 150.00000000" forcelimited="true" ctrlrange="-0.349066 2.79253" ctrllimited="true" />
+    <position name="LEFT_SHOULDER_Z_ctrl" joint="LEFT_SHOULDER_Z" kp="40.00000000" kv="2.00000000" forcerange="-80.00000000 80.00000000" forcelimited="true" ctrlrange="-1.91986 1.22173" ctrllimited="true" />
+    <position name="LEFT_ELBOW_Y_ctrl" joint="LEFT_ELBOW_Y" kp="40.00000000" kv="2.00000000" forcerange="-80.00000000 80.00000000" forcelimited="true" ctrlrange="-2.35619 0.174532925" ctrllimited="true" />
+  </actuator>
+
+  <sensor>
+    <framepos name="base_link_pos" objtype="site" objname="root_site" />
+    <framequat name="base_link_quat" objtype="site" objname="root_site" />
+    <framelinvel name="base_link_vel" objtype="site" objname="root_site" />
+    <frameangvel name="base_link_ang_vel" objtype="site" objname="root_site" />
+  </sensor>
+</mujoco>
