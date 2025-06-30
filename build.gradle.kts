@@ -8,6 +8,7 @@ ihmc {
    vcsUrl = "https://github.com/ihmcrobotics/ihmc-alexander-sdk"
    openSource = true
 
+   // Include SDK content as classpath resources
    resourceDirectory("main", "../../alexander-models")
    resourceDirectory("main", "../../alexander-ros2")
    configurePublications()
