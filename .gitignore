@@ -20,6 +20,8 @@
 **/.AppleDouble
 **/pitest
 **/generated-src2
+**/out
+**/bin
 
 
 # File types to ignore
