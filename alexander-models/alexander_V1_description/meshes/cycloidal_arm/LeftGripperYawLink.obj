@@ -886,7 +886,8 @@ vn -58.1220 8.7605 80.9017
 
 o N17_24_P03_01_Barret_clamp_ring
 g N17_24_P03_01_Barret_clamp_ring
-usemtl Material__183
+# usemtl Material__183
+usemtl Procedural_Car_paint
 s off
 f 1//1 2//2 3//3 
 f 4//4 5//5 6//6 

@@ -24,13 +24,13 @@
             <alias>6004</alias>
             <address>0</address>
             <actuatorPackage>A003</actuatorPackage>
-            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftAnkleTopMotor</name>
-            <alias>6007</alias>
+            <alias>6008</alias>
             <address>0</address>
             <actuatorPackage>A007</actuatorPackage>
             <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
@@ -39,7 +39,7 @@
         </XmlPlatinumTwitter>
         <XmlPlatinumTwitter>
             <name>LeftAnkleBottomMotor</name>
-            <alias>6008</alias>
+            <alias>6007</alias>
             <address>0</address>
             <actuatorPackage>A006</actuatorPackage>
             <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
@@ -120,34 +120,57 @@
             <alias>6110</alias>
             <address>0</address>
             <present>true</present>
+            <fxOffset>188.92116507233635</fxOffset>
+            <fyOffset>41.54594015499189</fyOffset>
+            <fzOffset>-474.78600141455195</fzOffset>
+            <txOffset>1.1384460380159669</txOffset>
+            <tyOffset>1.5184652274217516</tyOffset>
+            <tzOffset>15.18584664543155</tzOffset>
         </XmlAtiForceTorqueSensor>
     </devices>
     <transmissions>
         <XmlCycloidMotorMechanism>
-            <jointName>L_HIP_Y</jointName>
-            <motorName>LeftHipPitchMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
-            <present>true</present>
-        </XmlCycloidMotorMechanism>
-        <XmlCycloidMotorMechanism>
-            <jointName>L_HIP_Z</jointName>
+            <jointName>LEFT_HIP_Z</jointName>
             <motorName>LeftHipYawMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
+            <jointPositionOffset>6.021851758213513</jointPositionOffset>
+            <lowerJointLimit>-0.3490658504</lowerJointLimit>
+            <upperJointLimit>1.0472</upperJointLimit>
+            <torqueBreakFrequency>20.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <jointName>L_KNEE_Y</jointName>
+            <jointName>LEFT_HIP_Y</jointName>
+            <motorName>LeftHipPitchMotor</motorName>
+            <jointPositionOffset>-2.920423899711578</jointPositionOffset>
+            <lowerJointLimit>-2.61799</lowerJointLimit>
+            <upperJointLimit>0.785398</upperJointLimit>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
+            <present>true</present>
+        </XmlCycloidMotorMechanism>
+        <XmlCycloidMotorMechanism>
+            <jointName>LEFT_KNEE_Y</jointName>
             <motorName>LeftKneePitchMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
+            <jointPositionOffset>1.8991640892016666</jointPositionOffset>
+            <lowerJointLimit>0.0</lowerJointLimit>
+            <upperJointLimit>2.445206282</upperJointLimit>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
             <name>L_ANKLE_DIFFERENTIAL</name>
-            <pitchJoint>L_ANKLE_Y</pitchJoint>
-            <rollJoint>L_ANKLE_X</rollJoint>
+            <pitchJoint>LEFT_ANKLE_Y</pitchJoint>
+            <rollJoint>LEFT_ANKLE_X</rollJoint>
             <robotSide>left</robotSide>
             <leftMotor>LeftAnkleBottomMotor</leftMotor>
             <rightMotor>LeftAnkleTopMotor</rightMotor>
+            <!--Weird offset stuff is happening with left motor, use 0.398 if not working -3.377929893201839-->
+            <leftMotorOffset>0.4383593799640606</leftMotorOffset>
+            <rightMotorOffset>-3.4169559524258415</rightMotorOffset>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
+            <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
+            <rollJointUpperLimit>0.436332</rollJointUpperLimit>
+            <pitchJointLowerLimit>-1.0472</pitchJointLowerLimit>
+            <pitchJointUpperLimit>0.523599</pitchJointUpperLimit>
             <present>true</present>
         </XmlJointPairMechanism>
     </transmissions>

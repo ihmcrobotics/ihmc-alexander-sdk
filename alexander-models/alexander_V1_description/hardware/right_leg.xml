@@ -24,7 +24,7 @@
             <alias>7004</alias>
             <address>0</address>
             <actuatorPackage>A010</actuatorPackage>
-            <reversePositiveMotorDirection>true</reversePositiveMotorDirection>
+            <reversePositiveMotorDirection>false</reversePositiveMotorDirection>
             <zeroPositionOffset>0.0</zeroPositionOffset>
             <present>true</present>
         </XmlPlatinumTwitter>
@@ -120,34 +120,57 @@
             <alias>7110</alias>
             <address>0</address>
             <present>true</present>
+            <fxOffset>-27.720063167189345</fxOffset>
+            <fyOffset>-21.044991860218705</fyOffset>
+            <fzOffset>136.40101978876788</fzOffset>
+            <txOffset>-0.5401011486258316</txOffset>
+            <tyOffset>-2.5551814955630885</tyOffset>
+            <tzOffset>7.960432441306164</tzOffset>
         </XmlAtiForceTorqueSensor>
     </devices>
     <transmissions>
         <XmlCycloidMotorMechanism>
-            <jointName>R_HIP_X</jointName>
-            <motorName>RightHipRollMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
+            <jointName>RIGHT_HIP_Z</jointName>
+            <motorName>RightHipYawMotor</motorName>
+            <jointPositionOffset>3.881288523878079</jointPositionOffset>
+            <lowerJointLimit>-1.0472</lowerJointLimit>
+            <upperJointLimit>0.3490658504</upperJointLimit>
+            <torqueBreakFrequency>20.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <jointName>R_HIP_Y</jointName>
+            <jointName>RIGHT_HIP_Y</jointName>
             <motorName>RightHipPitchMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
+            <jointPositionOffset>0.16028889135900348</jointPositionOffset>
+            <lowerJointLimit>-2.61799</lowerJointLimit>
+            <upperJointLimit>0.785398</upperJointLimit>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlCycloidMotorMechanism>
-            <jointName>R_KNEE_Y</jointName>
+            <jointName>RIGHT_KNEE_Y</jointName>
             <motorName>RightKneePitchMotor</motorName>
-            <jointPositionOffset>0.0</jointPositionOffset>
+            <!--Currently set to use input encoder, -5.4700796158009535 for joint offset if using output encoder-->
+            <jointPositionOffset>0.06656952981060084</jointPositionOffset>
+            <lowerJointLimit>0.0</lowerJointLimit>
+            <upperJointLimit>2.445206282</upperJointLimit>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
             <present>true</present>
         </XmlCycloidMotorMechanism>
         <XmlJointPairMechanism>
             <name>R_ANKLE_DIFFERENTIAL</name>
-            <pitchJoint>R_ANKLE_Y</pitchJoint>
-            <rollJoint>R_ANKLE_X</rollJoint>
+            <pitchJoint>RIGHT_ANKLE_Y</pitchJoint>
+            <rollJoint>RIGHT_ANKLE_X</rollJoint>
             <robotSide>right</robotSide>
             <leftMotor>RightAnkleTopMotor</leftMotor>
             <rightMotor>RightAnkleBottomMotor</rightMotor>
+            <torqueBreakFrequency>25.0</torqueBreakFrequency>
+            <leftMotorOffset>4.793532404033188</leftMotorOffset>
+            <rightMotorOffset>-2.148555408106209</rightMotorOffset>
+            <rollJointLowerLimit>-0.436332</rollJointLowerLimit>
+            <rollJointUpperLimit>0.436332</rollJointUpperLimit>
+            <pitchJointLowerLimit>-1.0472</pitchJointLowerLimit>
+            <pitchJointUpperLimit>0.523599</pitchJointUpperLimit>
             <present>true</present>
         </XmlJointPairMechanism>
     </transmissions>

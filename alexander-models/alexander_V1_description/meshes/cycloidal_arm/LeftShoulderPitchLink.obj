@@ -1280,7 +1280,8 @@ vn -0.0000 70.7107 70.7107
 
 o Body1
 g Body1
-usemtl Opaque_165_165_165_
+# usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 1//3 30//2 2//1 
 f 31//6 30//5 1//4 
@@ -2234,7 +2235,8 @@ vn 0.0000 100.0000 0.0000
 
 o Body1_1
 g Body1_1
-usemtl Opaque_165_165_165_
+# usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 209//1089 182//1088 208//1087 
 f 183//1092 182//1091 209//1090 
@@ -2749,7 +2751,8 @@ vn 98.0971 2.4897 19.2552
 
 o Body1_2
 g Body1_2
-usemtl Opaque_67_72_77_
+# usemtl Opaque_67_72_77_
+usemtl Procedural_Car_paint
 s 1
 f 286//1563 315//1562 287//1561 
 f 314//1566 315//1565 286//1564 
@@ -4059,7 +4062,8 @@ vn 0.0000 -100.0000 0.0000
 
 o Body1_3
 g Body1_3
-usemtl Opaque_67_72_77_
+# usemtl Opaque_67_72_77_
+usemtl Procedural_Car_paint
 s 1
 f 354//1845 348//1844 347//1843 
 f 349//1848 348//1847 354//1846 
@@ -9623,7 +9627,8 @@ vn -0.0000 -100.0000 -0.0000
 
 o Body10
 g Body10
-usemtl Opaque_165_165_165_
+# usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 535//2859 612//2858 536//2857 
 f 613//2862 612//2861 535//2860 
@@ -11630,7 +11635,8 @@ vn -0.0000 0.0000 100.0000
 
 o Body1_4
 g Body1_4
-usemtl Opaque_89_96_102_
+# usemtl Opaque_89_96_102_
+usemtl Procedural_Car_paint
 s 1
 f 1361//7278 1329//7277 1328//7276 
 f 1330//7281 1329//7280 1361//7279 
@@ -19023,7 +19029,8 @@ vn 0.0000 100.0000 -0.0000
 
 o Body8
 g Body8
-usemtl Opaque_165_165_165_
+# usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 1404//7722 1406//7721 1405//7720 
 f 1407//7725 1406//7724 1404//7723 
@@ -22748,7 +22755,8 @@ vn 10.4956 1.2428 99.4399
 
 o Body1_5
 g Body1_5
-usemtl Opaque_67_72_77_
+# usemtl Opaque_67_72_77_
+usemtl Procedural_Car_paint
 s 1
 f 2533//13824 2535//13823 2534//13822 
 f 2536//13827 2535//13826 2533//13825 
@@ -23550,7 +23558,8 @@ vn 100.0000 -0.0000 0.0000
 
 o Body1_6
 g Body1_6
-usemtl Opaque_165_165_165_
+# usemtl Opaque_165_165_165_
+usemtl Procedural_Car_paint
 s 1
 f 2818//15216 2865//15215 2819//15214 
 f 2842//15219 2865//15218 2818//15217 

@@ -3425,7 +3425,8 @@ vn -15.7498 -70.7107 68.9343
 
 o N17_25_P11_01_Elbow_To_Forearm
 g N17_25_P11_01_Elbow_To_Forearm
-usemtl Material__29
+# usemtl Material__29
+usemtl Procedural_Car_paint
 s 1
 f 3//3 2//2 1//1 
 f 2//6 3//5 4//4 
@@ -9818,7 +9819,8 @@ vn 78.7530 -57.7556 -21.5000
 
 o N17_24_P01_01_L_Elbow_Bend_Structure
 g N17_24_P01_01_L_Elbow_Bend_Structure
-usemtl Material__29
+# usemtl Material__29
+usemtl Procedural_Car_paint
 s 1
 f 487//2931 486//2930 485//2929 
 f 490//2934 489//2933 488//2932 
@@ -14504,7 +14506,8 @@ vn -0.0000 100.0000 -0.0000
 
 o N17_24_P01_03_L_Forearm_wire_inlet
 g N17_24_P01_03_L_Forearm_wire_inlet
-usemtl Material__30
+# usemtl Material__30
+usemtl Procedural_Car_paint
 s 1
 f 1318//7503 1317//7502 1316//7501 
 f 1319//7506 1317//7505 1318//7504 
@@ -18196,7 +18199,8 @@ vn 2.2380 99.0323 -13.6963
 
 o N17_24_P01_04_L_Forearm_wire_inlet_cover
 g N17_24_P01_04_L_Forearm_wire_inlet_cover
-usemtl Material__30
+# usemtl Material__30
+usemtl Procedural_Car_paint
 s 1
 f 1862//10107 1861//10106 1860//10105 
 f 1865//10110 1864//10109 1863//10108 
