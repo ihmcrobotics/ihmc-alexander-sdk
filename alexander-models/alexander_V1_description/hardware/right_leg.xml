@@ -150,8 +150,8 @@
         <XmlCycloidMotorMechanism>
             <jointName>RIGHT_KNEE_Y</jointName>
             <motorName>RightKneePitchMotor</motorName>
-            <!--Currently set to use input encoder, -5.4700796158009535 for joint offset if using output encoder-->
-            <jointPositionOffset>0.064061</jointPositionOffset>
+            <!--Currently set to use input encoder, -5.4700796158009535 for joint offset if using output encoder 0.064061-->
+            <jointPositionOffset>-0.2666</jointPositionOffset>
             <lowerJointLimit>0.0</lowerJointLimit>
             <upperJointLimit>2.445206282</upperJointLimit>
             <torqueBreakFrequency>25.0</torqueBreakFrequency>
