@@ -14,8 +14,6 @@ buildscript {
    }
 }
 
-ProcessBuilder("git", "submodule", "update", "--init", "--recursive").directory(settings.settingsDir).start().waitFor()
-
 val ihmcSettingsConfigurator = us.ihmc.build.IHMCSettingsConfigurator(settings, logger, extra)
 ihmcSettingsConfigurator.checkRequiredPropertiesAreSet()
 ihmcSettingsConfigurator.configureExtraSourceSets()
